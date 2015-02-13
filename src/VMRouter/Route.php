@@ -40,6 +40,13 @@ class Route
 	 */
 	private $config;
 
+	/**
+	 *  Выходные параметры Route
+	 *
+	 * @var array
+	 */
+	private $output;
+
 
 	/**
 	 * @param $resource
@@ -55,6 +62,15 @@ class Route
 		$this->config = $config;
 	}
 
+	/**
+	 * Выходные параметры Route
+	 * 
+	 * @return array
+	 */
+	public function getOutput()
+	{
+		return (array)$this->output;
+	}
 
 	/**
 	 * вызов контролера
