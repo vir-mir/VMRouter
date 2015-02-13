@@ -1,5 +1,5 @@
 {
-	"name": "vir-mir/VMRouter",
+	"name": "vir-mir/router",
 	"type": "library",
 	"description": "Simple PHP Router, supports REST and reverse routing.",
 	"keywords": ["router", "routing", "php", "rest"],

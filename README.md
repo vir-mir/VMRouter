@@ -11,7 +11,7 @@
 ```javascript
 {
     "require": {
-        "vir-mir/VMRouter": "dev-master"
+        "vir-mir/router": "dev-master"
     }
 }
 ```
