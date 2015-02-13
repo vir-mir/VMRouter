@@ -1,0 +1,23 @@
+{
+	"name": "vir-mir/VMRouter",
+	"type": "library",
+	"description": "Simple PHP Router, supports REST and reverse routing.",
+	"keywords": ["router", "routing", "php", "rest"],
+	"homepage": "https://github.com/vir-mir/VMRouter",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Firsov Alex",
+			"email": "virmir49@gmail.com",
+			"homepage": "http://brainstorage.me/vir-mir/"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"VMRouter\\": "src/VMRouter/"
+		}
+	}
+}
