@@ -65,7 +65,7 @@ class Route
 	/**
 	 * Выходные параметры Route
 	 *
-	 * @return array
+	 * @return mixed
 	 */
 	public function getOutput()
 	{
