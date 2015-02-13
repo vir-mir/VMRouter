@@ -43,7 +43,7 @@ class Route
 	/**
 	 *  Выходные параметры Route
 	 *
-	 * @var array
+	 * @var mixed
 	 */
 	private $output;
 
@@ -64,12 +64,12 @@ class Route
 
 	/**
 	 * Выходные параметры Route
-	 * 
+	 *
 	 * @return array
 	 */
 	public function getOutput()
 	{
-		return (array)$this->output;
+		return $this->output;
 	}
 
 	/**
@@ -92,7 +92,7 @@ class Route
 			throw new \Exception('Не существует такого метода в контроллере');
 		}
 
-		$instance->$action[1]();
+		$this->output = $instance->$action[1]();
 
 	}
 
