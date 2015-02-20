@@ -69,6 +69,18 @@ class Router {
 				continue;
 			}
 
+            $domains = $route->getDomains();
+
+            if (!is_array($domains))
+            {
+                continue;
+            }
+
+            if (!(in_array('*', $domains) || in_array($_SERVER['HTTP_HOST'], $domains)))
+            {
+                continue;
+            }
+
 			if (!preg_match("~^".$route->getRegex()."$~", $requestUrl, $matches))
 			{
 				continue;

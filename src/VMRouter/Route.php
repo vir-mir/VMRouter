@@ -58,7 +58,8 @@ class Route
 	{
 		$this->url = $resource;
 		$this->methods = array_key_exists('methods', $config) ? $config['methods'] : [];
-		$config['_controller'] = array_key_exists('_controller', $config) ? $config['_controller'] : '';
+		$config['controller'] = array_key_exists('controller', $config) ? $config['controller'] : '';
+		$config['domains'] = array_key_exists('domains', $config) ? $config['domains'] : ['*'];
 		$this->config = $config;
 	}
 
@@ -70,6 +71,16 @@ class Route
 	public function getOutput()
 	{
 		return $this->output;
+	}
+
+	/**
+	 * Разрешенные домены Route
+	 *
+	 * @return mixed
+	 */
+	public function getDomains()
+	{
+		return $this->config['domains'];
 	}
 
 	/**

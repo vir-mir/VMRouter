@@ -18,14 +18,15 @@ namespace VMRouter;
 class RouteCollection extends \SplObjectStorage
 {
 
-	/**
-	 * Добовляем Route в колекцию
-	 *
-	 * @param Route $attachObject
-	 */
-	public function attach(Route $attachObject)
+    /**
+     * Добовляем Route в колекцию
+     *
+     * @param Route $attachObject
+     * @param null $data
+     */
+	public function attach(Route $attachObject, $data = null)
 	{
-		parent::attach($attachObject);
+		parent::attach($attachObject, $data);
 	}
 
 	/**
