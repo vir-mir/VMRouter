@@ -24,7 +24,7 @@ class RouteCollection extends \SplObjectStorage
      * @param Route $attachObject
      * @param null $data
      */
-	public function attach(Route $attachObject, $data = null)
+	public function attach($attachObject, $data = null)
 	{
 		parent::attach($attachObject, $data);
 	}

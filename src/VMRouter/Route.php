@@ -90,7 +90,7 @@ class Route
 	 */
 	public function dispatch()
 	{
-		$action = explode('::', $this->config['_controller']);
+		$action = explode('::', $this->config['controller']);
 		if (!class_exists($action[0]))
 		{
 			throw new \Exception('Не существует такого контроллера');
