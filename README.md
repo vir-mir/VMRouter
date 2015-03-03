@@ -5,6 +5,7 @@
 * настраиваемые HTTP методы
 * REST - методы
 * Можно раскладывать по группам
+* Разделение URL по доменам
 
 # Установка через **composer**
 
@@ -40,13 +41,15 @@ use VMRouter\Route;
 
 $collection = new RouteCollection();
 $collection->attach(new Route('/users/', array(
-    '_controller' => 'Controller\User::usersCreateAction',
-    'methods' => 'POST'
+    'controller' => 'Controller\User::usersCreateAction',
+    'methods' => 'POST',
+    'domains' => ['site.ru', 'strore.site.ru'], // будет работать только на указанных доменах
 )));
 
 $collection->attach(new Route('/users/(?P<user_id>\d+)/', array(
-    '_controller' => 'Controller\User::getUAction',
-    'methods' => 'GET'
+    'controller' => 'Controller\User::getUAction',
+    'methods' => 'GET',
+    'domains' => ['*'] // все домены 
 )));
 
 $router = new Router($collection);
@@ -87,17 +90,17 @@ $routes = [];
 
 
 array_push($routes, new Route('/users/', array(
-			'_controller' => 'someController::users_create',
+			'controller' => 'someController::users_create',
 			'methods' => 'GET'
 		)));
 
 array_push($routes, new Route('/users/(?P<user_id>\d+)/cover/', array(
-			'_controller' => 'someController::users_create',
+			'controller' => 'someController::users_create',
 			'methods' => 'GET'
 		)));
 
 array_push($routes, new Route('/users/(?P<user_id>\d+)/', array(
-			'_controller' => 'someController::users_create',
+			'controller' => 'someController::users_create',
 			'methods' => 'GET'
 		)));
 
